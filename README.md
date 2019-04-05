@@ -46,3 +46,13 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## TODO
+
+- [x] Create Nuxt project on Express
+- [x] Add passport
+- [x] Add sequelize
+- [] Change to TODO Example
+- [] Add debug settings on VSCode
+- [] Create cli tool like create-nuxt-app
+- [] Typescript support
