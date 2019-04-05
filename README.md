@@ -52,7 +52,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [x] Create Nuxt project on Express
 - [x] Add passport
 - [x] Add sequelize
-- [] Change to TODO Example
-- [] Add debug settings on VSCode
-- [] Create cli tool like create-nuxt-app
-- [] Typescript support
+- [ ] Change to TODO Example
+- [ ] Add debug settings on VSCode
+- [ ] Create cli tool like create-nuxt-app
+- [ ] Typescript support
