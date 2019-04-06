@@ -102,9 +102,7 @@ db.Todo.findAll().then(todoList => todoList.forEach(todo => console.log(todo.Use
 - [x] Add sequelize
 - [x] Add debug settings on VSCode
 - [x] Add Sequelize REPL mode
-- [ ] Add sample page
-- [ ] Change default port number
-- [ ] Fix linter settings
-- [ ] Change to TODO Example
+- [x] Change to TODO Example
+- [ ] Add sample deployed page link
 - [ ] Create cli tool like create-nuxt-app
 - [ ] Typescript support

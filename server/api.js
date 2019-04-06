@@ -10,12 +10,38 @@ function isAuthenticated(req, res, next) {
   }
 }
 
-router.get('/secret', isAuthenticated, (req, res) => {
-  models.User.create({
-    name: 'sample' + String(Math.random())
-  }).then(result => {
-    res.json(result).end()
-  })
+router.get('/todos', isAuthenticated, (req, res) => {
+  const userId = req.session.passport.user.id
+  models.User.findOne({ where: { googleId: userId } })
+    .then(user => user.getTodos())
+    .then(todoList => res.json(todoList).end())
+})
+
+router.post('/todo', isAuthenticated, (req, res) => {
+  const userId = req.session.passport.user.id
+  const title = req.body.title
+
+  models.User.findOne({ where: { googleId: userId } })
+    .then(user =>
+      user.createTodo({
+        title: title
+      })
+    )
+    .then(todo => res.json(todo).end())
+})
+
+router.delete('/todo', isAuthenticated, (req, res) => {
+  const userId = req.session.passport.user.id
+  const deleteId = req.body.id
+
+  models.User.findOne({ where: { googleId: userId } })
+    .then(user =>
+      models.Todo.findOne({ where: { id: deleteId, UserId: user.id } })
+    )
+    .then(todo => {
+      todo.destroy()
+    })
+    .then(todo => res.json(todo).end())
 })
 
 router.get('/', (req, res) => {

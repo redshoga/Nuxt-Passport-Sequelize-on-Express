@@ -1,3 +1,5 @@
+/* This file was created automatically by sequelize-cli */
+/* eslint-disable */
 'use strict';
 
 const fs = require('fs');

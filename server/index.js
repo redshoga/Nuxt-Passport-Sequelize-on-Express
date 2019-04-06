@@ -5,6 +5,7 @@ const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
+const bodyParser = require('body-parser')
 const session = require('express-session')
 const config = require('../nuxt.config.js')
 const passport = require('./passport-loader')
@@ -29,6 +30,12 @@ async function start() {
   }
 
   // Middleware
+  app.use(
+    bodyParser.urlencoded({
+      extended: true
+    })
+  )
+  app.use(bodyParser.json())
   app.use(
     session({
       secret: process.env.SESSION_RANDOM_KEY,

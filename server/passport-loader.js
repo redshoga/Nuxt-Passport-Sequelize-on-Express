@@ -4,6 +4,8 @@ const passport = require('passport')
 
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
 
+const models = require('../db/models')
+
 passport.use(
   new GoogleStrategy(
     {
@@ -22,6 +24,16 @@ passport.use(
 )
 
 passport.serializeUser((user, done) => {
+  console.log('passport.serializeUser')
+  console.log('googleId:', user.id)
+  console.log('name:', user.displayName)
+
+  models.User.findOne({ where: { googleId: user.id } }).then(obj => {
+    if (!obj) {
+      return models.User.create({ googleId: user.id, name: user.displayName })
+    }
+  })
+
   done(null, user)
 })
 
