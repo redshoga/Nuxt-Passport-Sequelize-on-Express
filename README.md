@@ -62,7 +62,6 @@ You can use `debugger` and breakpoint and debug your code.
 You can use REPL mode and check created model.
 
 ```bash
-sequelize db:migrate
 npm run db:shell
 ```
 
