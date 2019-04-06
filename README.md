@@ -47,14 +47,25 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
+## How to debug on VSCode
+
+Set `Debug Nuxt on Chrome` setting and exec(F5)
+
+You can use `debugger` and breakpoint and debug your code.
+
+**Attention:**
+- If you use Chrome, you have to install [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) to your VSCode.
+- Note that the screen does not appear until build is complete.
+
 ## TODO
 
 - [x] Create Nuxt project on Express
 - [x] Add passport
 - [x] Add sequelize
+- [x] Add debug settings on VSCode
+- [ ] Add sample page
 - [ ] Change default port number
 - [ ] Fix linter settings
 - [ ] Change to TODO Example
-- [ ] Add debug settings on VSCode
 - [ ] Create cli tool like create-nuxt-app
 - [ ] Typescript support
