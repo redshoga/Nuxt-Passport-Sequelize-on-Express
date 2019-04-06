@@ -8,7 +8,7 @@ Please create .env file in reference to .env.sample
 
 **database.json**
   
-Please database.json file in reference to database.sample.json
+Please create database.json file in reference to database.sample.json
 
 ## 2. DB Setup
 
