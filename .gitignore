@@ -84,4 +84,5 @@ dist
 sw.*
 
 database.json
+.env.develop
 *.db

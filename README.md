@@ -1,5 +1,7 @@
 # nuxt-passport-sequelize-on-express
 
+Sample page: https://mighty-wave-10606.herokuapp.com/
+
 ## 1. Create environment variable files
 
 **.env**
@@ -96,6 +98,8 @@ db.Todo.findAll().then(todoList => todoList.forEach(todo => console.log(todo.Use
 
 ## How to deploy on heroku
 
+Sample page: https://mighty-wave-10606.herokuapp.com/
+
 0. Preparation
 
 ```
@@ -128,7 +132,7 @@ git push heroku master
 - [x] Add debug settings on VSCode
 - [x] Add Sequelize REPL mode
 - [x] Change to TODO Example
-- [ ] Add sample deployed page link
-- [ ] Add how to deploy on heroku
+- [x] Add sample deployed page link
+- [x] Add how to deploy on heroku
 - [ ] Create cli tool like create-nuxt-app
 - [ ] Typescript support
