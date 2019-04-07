@@ -94,6 +94,30 @@ db.User.findOne({name: "redshoga"}).then(user => user.destroy())
 db.Todo.findAll().then(todoList => todoList.forEach(todo => console.log(todo.UserId)))
 ```
 
+## How to deploy on heroku
+
+Preparation
+
+```
+npm install -g heroku
+heroku plugins:install heroku-config
+heroku login
+heroku create
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+Set environment variables script to heroku for Windows user
+
+```
+set_heroku_config.bat
+```
+
+Deploy
+
+```
+git push heroku master
+```
+
 ## TODO
 
 - [x] Create Nuxt project on Express
@@ -103,5 +127,6 @@ db.Todo.findAll().then(todoList => todoList.forEach(todo => console.log(todo.Use
 - [x] Add Sequelize REPL mode
 - [x] Change to TODO Example
 - [ ] Add sample deployed page link
+- [ ] Add how to deploy on heroku
 - [ ] Create cli tool like create-nuxt-app
 - [ ] Typescript support

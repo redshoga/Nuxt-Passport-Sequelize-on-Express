@@ -4,6 +4,10 @@
   "description": "My great Nuxt.js project",
   "author": "redshoga",
   "private": true,
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "dev-debug": "cross-env NODE_ENV=development nodemon -L --inspect-brk=0.0.0.0:9229 server/index.js --watch server",
