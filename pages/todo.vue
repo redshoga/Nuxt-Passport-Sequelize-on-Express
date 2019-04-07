@@ -25,9 +25,9 @@ export default {
       todoTitle: ''
     }
   },
-  asyncData({ $axios }) {
-    // const todo = await $axios.$get('/api/todos')
-    return { todoList: [] }
+  async asyncData({ $axios }) {
+    const todo = await $axios.$get('/api/todos')
+    return { todoList: todo }
   },
   fetch({ store, redirect }) {
     if (!store.state.authUser) {
