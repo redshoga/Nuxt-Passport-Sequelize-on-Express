@@ -96,7 +96,7 @@ db.Todo.findAll().then(todoList => todoList.forEach(todo => console.log(todo.Use
 
 ## How to deploy on heroku
 
-Preparation
+0. Preparation
 
 ```
 npm install -g heroku
@@ -106,13 +106,15 @@ heroku create
 heroku addons:create heroku-postgresql:hobby-dev
 ```
 
-Set environment variables script to heroku for Windows user
+1. Change production settings database.json for heroku Postgres
+
+2. Exec script to set environment variables to heroku 
 
 ```
-set_heroku_config.bat
+node set_heroku_config.js
 ```
 
-Deploy
+1. Deploy
 
 ```
 git push heroku master

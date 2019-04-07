@@ -12,7 +12,7 @@ if (env === 'development') {
   config = require(path.resolve(__dirname, '/../../database.json'))[env]
 } else {
   console.log(process.env)
-  config = JSON.parse(process.env.SEQUELIZE_SETTINGS)[env]
+  config = JSON.parse(process.env.SEQUELIZE_SETTINGS.replace(/'/g, '"'))[env]
 }
 console.log(config)
 
